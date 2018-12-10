@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui" />
+	
+	<title>Login - Matrículas BA</title>
+	
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/img/icon.png">
+	<link rel="stylesheet" href="assets/css/bootstrap.css" type="text/css">
+	<link rel="stylesheet" href="assets/css/font-awesome/css/font-awesome.css" type="text/css">
+	<link rel="stylesheet" href="assets/css/app.css" type="text/css">
+	<link rel="stylesheet" href="assets/css/stylesheet.css" type="text/css">
+</head>
+<body>
+	<div class="app mba-login-app" id="app">
+		<div class="row mba-login-row">
+			<div class="col-sm-12 col-md-5 mba-login-gradient">
+				<div class="mba-login-overlay"></div>
+			</div>
+			<div class="col-sm-12 col-md-7 mba-login-form">
+				<div class="box">
+			        <div class="box-header text-center">
+			         	<h2>MATRÍCULAS - BA <img src="assets/img/icon.png" width="30" height="28" alt="."></h2>
+			        </div>
+			        <div class="box-divider"></div>
+			        <div class="box-body">
+			          	<form action="#" method="POST">
+				            <div class="form-group">
+				             	<label for="email">Endereço de e-mail</label>
+				              	<input type="email" class="form-control" id="email" placeholder="Entre com o e-mail">
+				            </div>
+				            <div class="form-group">
+				              	<label for="password">Senha</label>
+				              	<input type="password" class="form-control" id="password" placeholder="Entre com a Senha">
+				            </div>
+				            <div class="form-group">
+			            		<button onclick="event.preventDefault(); window.location.replace('/aluno/transferencia');" type="submit" class="btn btn-fw primary">Entrar</button>
+			            	</div>
+			          	</form>
+			        </div>
+		      	</div>
+			</div>
+		</div>
+    </div>
+
+	<script src="assets/js/jquery-3.3.1.min.js"></script>
+	<script src="assets/js/tether.min.js"></script>
+	<script src="assets/js/bootstrap.js"></script>
+</body>
+</html>

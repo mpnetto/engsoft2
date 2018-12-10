@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui" />
+	
+	<title>Sistema de Matrículas</title>
+	
+	<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/icon.png">
+	<link rel="stylesheet" href="/assets/css/bootstrap.css" type="text/css">
+	<link rel="stylesheet" href="/assets/css/font-awesome/css/font-awesome.css" type="text/css">
+	<link rel="stylesheet" href="/assets/css/app.css" type="text/css">
+	<link rel="stylesheet" href="/assets/css/stylesheet.css" type="text/css">
+</head>
+<body>
+	<div class="app" id="app">
+
+        <!-- aside -->
+        <div id="aside" class="app-aside modal nav-dropdown">
+            <div class="left navside white dk" layout="column">
+                <div class="navbar navbar-md no-radius mba-blue">
+                    <!-- brand -->
+                    <a class="navbar-brand">
+                        <span class="hidden-folded inline">MATRÍCULAS</span>
+                        <img src="/assets/img/icon.png" alt=".">
+                    </a>
+                    <!-- / brand -->
+                </div>
+                <div class="no-radius mba-dark-blue mba-logged-user">
+                    <img src="/assets/img/ellipse.png" alt="." height="40" width="40">
+                    <span>
+                        <p>Fulano da Silva</p>
+                        <p>Salvador - BA</p>
+                    </span>
+                </div>
+                <div class="hide-scroll" flex>
+                    <nav class="scroll nav-light">
+                        <ul class="nav">
+                            <li class="nav-header hidden-folded">
+                                <small class="text-muted">Principal</small>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <span class="nav-icon">
+                                        <i class="fa fa-calendar-o"></i>
+                                    </span>
+                                    <span class="nav-text">Atividades</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="nav-icon">
+                                        <i class="fa fa-history"></i>
+                                    </span>
+                                    <span class="nav-text">Histórico</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/aluno/criar/confirmar">
+                                    <span class="nav-icon">
+                                        <i class="fa fa-user"></i>
+                                    </span>
+                                    <span class="nav-text">Comprovante de Matrícula</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="nav-icon">
+                                        <i class="fa fa-user"></i>
+                                    </span>
+                                    <span class="nav-text">Pré-Matrícula</span>
+                                </a>
+                            </li>
+                            <li class="active">
+                                <a href="/aluno/transferencia">
+                                    <span class="nav-icon">
+                                        <i class="fa fa-user"></i>
+                                    </span>
+                                    <span class="nav-text">Transferência</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-header hidden-folded">
+                                <small class="text-muted">Admin</small>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="nav-icon">
+                                        <i class="fa fa-user"></i>
+                                    </span>
+                                    <span class="nav-text">Alunos</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="nav-icon">
+                                        <i class="fa fa-home"></i>
+                                    </span>
+                                    <span class="nav-text">Escolas</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/escola/necessidades">
+                                    <span class="nav-icon">
+                                        <i class="fa fa-comments"></i>
+                                    </span>
+                                    <span class="nav-text">Necessidades</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="nav-icon">
+                                        <i class="fa fa-user"></i>
+                                    </span>
+                                    <span class="nav-text">Professores</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="no-radius mba-blue mba-logout">
+                    <a href="/">
+                        <span>Sair</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- / aside -->
+
+        <!-- content -->
+        <div id="content" class="app-content box-shadow-z0" role="main">
+            <div class="app-header white box-shadow">
+                <div class="navbar navbar-toggleable-sm flex-row align-items-center">
+                    <!-- Naviation on mobile -->
+                    <a data-toggle="modal" data-target="#aside" class="hidden-lg-up mr-3">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                    <!-- / Naviation on mobile -->
+
+                    <!-- Page title -->
+                    <div class="mb-0 h5 no-wrap" id="pageTitle">Painel</div>
+                    <!-- / Page title -->
+                </div>
+            </div>
+            <div class="app-footer">
+                <div class="p-2 text-xs">
+                    <div class="pull-right text-muted py-1">
+                        &copy; Copyright <strong>MATRÍCULAS-BA</strong>
+                    </div>
+                    <div class="nav">
+                        <a class="nav-link" href="#">Sobre</a>
+                    </div>
+                </div>
+            </div>
+            <div class="app-body" id="view">
+                <div class="padding">
+                	<div class="row">
+						<div class="col-sm-4">
+							<div class="box mba-fast-btn">
+								<div class="box-body mba-blue">
+									<span>Página Principal</span>
+									<span class="float-right"><i class="fa fa-home"></i></span>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="box mba-fast-btn">
+								<div class="box-body mba-blue">
+									<span>Nova Atividade</span>
+									<span class="float-right"><i class="fa fa-tasks"></i></span>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="box mba-fast-btn">
+								<div class="box-body mba-blue">
+									<span>Configurações</span>
+									<span class="float-right"><i class="fa fa-gear"></i></span>
+								</div>
+							</div>
+						</div>
+                	</div>
+                    <div class="row">
+						<div class="col-sm-12">
+							<div class="box">
+								<!-- specific section -->
+								<div class="box-header dker" style="display: flex">
+									<div class="col-md-10">
+										<h3>Necessidades - Escola Suzanna Imbassahay</h3>
+								    	<small>Acompanhar necessidades da escola</small>
+									</div>
+									<form action="/escola/chamada" method="POST">
+										<button type="submit" class="btn btn-fw primary">Criar Chamada</button>
+									</form>
+						    	</div>
+								<div class="box-body">
+									<div class="row">
+						    			<div class="col-md-10 offset-md-1">
+						    				<table id="ticket" class="table table-bordele">
+							    				<thead>
+							    					<tr>
+							    						<th scope="col">Sala</th>
+							    						<th scope="col">Tipo</th>
+							    						<th scope="col">Necessidade</th>
+							    						<th scope="col">Prazo</th>
+							    						<th scope="col">Funcionando</th>
+							    						<th scope="col">Ticket</th>
+							    						<th scope="col"></th>				
+						    						</tr>
+							    				</thead>
+							    				<tbody >
+							    					 <tr th:each="ticket, rowStat: ${tickets}"
+													 	 th:style="${rowStat.odd} ? 'color: gray' : 'color: blue;'">
+												        <td scope="row" th:text="${ticket.sala.numero}"></td>
+												        <td th:text="${ticket.tipo}"></td>
+												        <td th:text="${ticket.resumo}"></td>
+												        <td th:text="${ticket.prazo}"></td>
+												        <td th:text="${ticket.status}? Sim : Nao">Sim</td>
+												        <td th:text="'#' + ${ticket.numeroTicket}"></td>
+														
+												        <td>
+												        	<form class="tb-form" action="#"  th:action="@{/escola/chamada/editar?getId=} + ${{ticket.numeroTicket}} 
+																										+ @{&getRoom=} + ${{ticket.sala.numero}}
+																										+ @{&getSchool=} + ${{ticket.escola.nome}}
+																										+ @{&getType=} + ${{ticket.tipo}}
+																										+ @{&getTerm=} + ${{ticket.prazo}}
+																										+ @{&getStatus=} + ${{ticket.status}}
+																										+ @{&getResume=} + ${{ticket.resumo}}" method="POST">
+													            <button type="submit" class="btn btn-fw success">
+													            	<span class="nav-icon"><i class="fa fa-edit fa-lg"></i></span>
+													            </button>
+												            </form>
+												            <form class="tb-form" action="#"  th:action="@{/remove-ticket?getId=} + ${{ticket.numeroTicket}}" method="POST">
+													            <button type="submit" class="btn btn-fw danger">
+													            	<span class="nav-icon"><i class="fa fa-times-circle fa-lg"></i></span>
+													            </button>
+												            </form>
+											            </td>
+										            </tr>
+
+							    				</tbody>
+						    				</table>
+						    										    										    			
+					    				</div>
+						    		</div>
+								</div>
+								<!-- specific section -->
+							</div>
+						</div>
+					</div>
+                </div>
+            </div>
+        </div>
+        <!-- / content -->
+    </div>
+
+	<script src="/assets/js/jquery-3.3.1.min.js"></script>
+	<script src="/assets/js/tether.min.js"></script>
+	<script src="/assets/js/bootstrap.js"></script>
+	<script src="/assets/js/jquery.mask.min.js"></script>
+	<script src="/assets/js/scripts.js"></script>
+	<script>
+        $('#city').on('change', function(event) {
+            event.preventDefault();
+            
+            $.ajax({url: '/getNeighborhoods?city=' + $(this).children("option:selected").val()})
+            .done(function(neighborhoods) {
+            	let neighborhood = $('#neighborhood'), school = $('#school');
+            	neighborhood.empty();
+            	school.empty();
+            	
+            	for (var i = 0; i < neighborhoods.length; i++) {
+            		neighborhood.append('<option value="'+ neighborhoods[i] +'" selected>'+ neighborhoods[i] +'</option>');            	    
+            	}
+            	
+            	neighborhood.append('<option value="null" selected>Selecione um Bairro</option>');
+            	school.append('<option value="null" selected>--</option>');
+            })
+            .fail(function() {
+                window.alert("Um erro ocorreu ao recuperar bairros!");
+            });
+        });
+        
+        $('#neighborhood').on('change', function(event) {
+            event.preventDefault();
+            
+            $.ajax({url: '/getSchools?neighborhood=' + $(this).children("option:selected").val()})
+            .done(function(schools) {
+            	let school = $('#school');
+            	school.empty();
+            	
+            	for (var i = 0; i < schools.length; i++) {
+            		school.append('<option value="'+ schools[i] +'" selected>'+ schools[i] +'</option>');            	    
+            	}
+            	
+            	school.append('<option value="null" selected>Selecione uma Escola</option>');
+            })
+            .fail(function() {
+                window.alert("Um erro ocorreu ao recuperar escolas!");
+            });
+        });
+    </script>
+</body>
+</html>

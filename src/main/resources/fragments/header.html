@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Header Fragment</title>
+</head>
+<body>
+	<div class="app-header white box-shadow" th:fragment="header">
+        <div class="navbar navbar-toggleable-sm flex-row align-items-center">
+            <!-- Naviation on mobile -->
+            <a data-toggle="modal" data-target="#aside" class="hidden-lg-up mr-3">
+                <i class="fa fa-bars"></i>
+            </a>
+            <!-- / Naviation on mobile -->
+
+            <!-- Page title -->
+            <div class="mb-0 h5 no-wrap" id="pageTitle">Painel</div>
+            <!-- / Page title -->
+        </div>
+    </div>
+</body>
+</html>

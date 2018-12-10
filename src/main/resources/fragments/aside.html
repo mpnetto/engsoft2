@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Aside Fragment</title>
+</head>
+<body>
+	<div id="aside" class="app-aside modal nav-dropdown" th:fragment="aside">
+        <div class="left navside white dk" layout="column">
+            <div class="navbar navbar-md no-radius mba-blue">
+                <!-- brand -->
+                <a class="navbar-brand">
+                    <span class="hidden-folded inline">MATRÍCULAS</span>
+                    <img src="assets/img/icon.png" alt=".">
+                </a>
+                <!-- / brand -->
+            </div>
+            <div class="no-radius mba-dark-blue mba-logged-user">
+				<img src="assets/img/ellipse.png" alt="." height="40" width="40">
+				<span>
+					<p>Fulano da Silva</p>
+					<p>Salvador - BA</p>
+				</span>
+            </div>
+            <div class="hide-scroll" flex>
+                <nav class="scroll nav-light">
+                    <ul class="nav">
+                        <li class="nav-header hidden-folded">
+                            <small class="text-muted">Principal</small>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <span class="nav-icon">
+                                    <i class="fa fa-calendar-o"></i>
+                                </span>
+                                <span class="nav-text">Atividades</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="nav-icon">
+                                    <i class="fa fa-history"></i>
+                                </span>
+                                <span class="nav-text">Histórico</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="nav-icon">
+                                    <i class="fa fa-user"></i>
+                                </span>
+                                <span class="nav-text">Comprovante de Matrícula</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="nav-icon">
+                                    <i class="fa fa-user"></i>
+                                </span>
+                                <span class="nav-text">Pré-Matrícula</span>
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="#">
+                                <span class="nav-icon">
+                                    <i class="fa fa-user"></i>
+                                </span>
+                                <span class="nav-text">Transferência</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-header hidden-folded">
+                            <small class="text-muted">Admin</small>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="nav-icon">
+                                    <i class="fa fa-user"></i>
+                                </span>
+                                <span class="nav-text">Alunos</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="nav-icon">
+                                    <i class="fa fa-home"></i>
+                                </span>
+                                <span class="nav-text">Escolas</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="nav-icon">
+                                    <i class="fa fa-comments"></i>
+                                </span>
+                                <span class="nav-text">Necessidades</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="nav-icon">
+                                    <i class="fa fa-user"></i>
+                                </span>
+                                <span class="nav-text">Professores</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="no-radius mba-blue mba-logout">
+				<a href="login.jsp">
+					<span>Sair</span>
+				</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
